@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guedes Store | Moda Masculina</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#151515}
+header{background:#111;color:#fff;position:sticky;top:0;z-index:10}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:18px 22px}
+.logo{font-size:25px;font-weight:800;letter-spacing:1px}
+.logo span{color:#aaa}
+nav a{color:#fff;text-decoration:none;margin-left:24px;font-size:14px}
+.hero{background:linear-gradient(120deg,#111,#444);color:white;min-height:430px;display:flex;align-items:center}
+.hero-inner{max-width:1200px;width:100%;margin:auto;padding:55px 22px}
+.hero h1{font-size:clamp(40px,7vw,72px);line-height:.95;max-width:650px}
+.hero p{margin:22px 0;font-size:18px;color:#ddd}
+.btn{display:inline-block;background:#fff;color:#111;padding:14px 24px;text-decoration:none;font-weight:700;border-radius:4px}
+section{max-width:1200px;margin:auto;padding:55px 22px}
+.title{text-align:center;margin-bottom:30px}
+.title h2{font-size:30px}.title p{color:#666;margin-top:8px}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.category{background:#222;color:white;padding:35px 15px;text-align:center;border-radius:5px;font-weight:700}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border-radius:7px;overflow:hidden;box-shadow:0 3px 14px #00000012}
+.photo{height:270px;background:linear-gradient(135deg,#ddd,#888);display:flex;align-items:center;justify-content:center;color:#555;font-weight:bold}
+.info{padding:16px}.info h3{font-size:17px}.price{font-size:20px;font-weight:800;margin:10px 0}.buy{display:block;text-align:center;background:#111;color:#fff;text-decoration:none;padding:11px;border-radius:4px}
+.about{background:#fff;max-width:none}.about-inner{max-width:900px;margin:auto;text-align:center;padding:55px 22px}.about p{color:#555;line-height:1.7;margin-top:15px}
+footer{background:#111;color:#ddd;text-align:center;padding:35px 20px}footer strong{color:white}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#222;color:white;padding:14px 18px;border-radius:30px;text-decoration:none;font-weight:bold;box-shadow:0 4px 15px #0004}
+@media(max-width:800px){.categories,.products{grid-template-columns:repeat(2,1fr)}nav a{margin-left:10px}.hero{min-height:370px}}
+@media(max-width:480px){.nav{padding:15px}.logo{font-size:20px}nav a{font-size:12px}.categories,.products{grid-template-columns:1fr 1fr}.photo{height:210px}section{padding:40px 14px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">GUEDES <span>STORE</span></div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <p>GUEDES STORE • MODA MASCULINA</p>
+    <h1>Seu estilo.<br>Seu momento.</h1>
+    <p>Peças masculinas selecionadas para deixar seu visual mais marcante.</p>
+    <a class="btn" href="#produtos">VER PRODUTOS</a>
+  </div>
+</section>
+
+<section>
+  <div class="title"><h2>Categorias</h2><p>Encontre seu próximo look</p></div>
+  <div class="categories">
+    <div class="category">CAMISETAS</div>
+    <div class="category">CALÇAS</div>
+    <div class="category">SHORTS</div>
+    <div class="category">ACESSÓRIOS</div>
+  </div>
+</section>
+
+<section id="produtos">
+  <div class="title"><h2>Destaques</h2><p>Confira alguns dos nossos produtos</p></div>
+  <div class="products">
+    <article class="card"><div class="photo">FOTO DO PRODUTO</div><div class="info"><h3>Camiseta Premium</h3><div class="price">R$ 79,90</div><a class="buy" href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20na%20Camiseta%20Premium." target="_blank">Comprar</a></div></article>
+    <article class="card"><div class="photo">FOTO DO PRODUTO</div><div class="info"><h3>Camiseta Oversized</h3><div class="price">R$ 89,90</div><a class="buy" href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20na%20Camiseta%20Oversized." target="_blank">Comprar</a></div></article>
+    <article class="card"><div class="photo">FOTO DO PRODUTO</div><div class="info"><h3>Calça Masculina</h3><div class="price">R$ 129,90</div><a class="buy" href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20na%20Calça%20Masculina." target="_blank">Comprar</a></div></article>
+    <article class="card"><div class="photo">FOTO DO PRODUTO</div><div class="info"><h3>Shorts Casual</h3><div class="price">R$ 69,90</div><a class="buy" href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20Shorts%20Casual." target="_blank">Comprar</a></div></article>
+  </div>
+</section>
+
+<div class="about" id="sobre">
+  <div class="about-inner">
+    <div class="title"><h2>Sobre a Guedes Store</h2></div>
+    <p>A Guedes Store é uma loja de moda masculina criada para quem busca estilo, praticidade e peças que combinam com diferentes momentos.</p>
+  </div>
+</div>
+</main>
+
+<footer>
+  <strong>GUEDES STORE</strong>
+  <p style="margin-top:10px">Moda masculina • Instagram • WhatsApp</p>
+  <p style="margin-top:12px;font-size:13px">© 2026 Guedes Store. Todos os direitos reservados.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
+</body>
+</html>
