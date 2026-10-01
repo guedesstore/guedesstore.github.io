@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Guedes Store</title>
+  <title>Guedes Store | Moda</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -19,31 +20,41 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #fff;
-      color: #111;
+      background: #ffffff;
+      color: #111111;
     }
 
-    /* HEADER */
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 78px;
-      padding: 0 6%;
+      height: 76px;
+
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(14px);
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(10, 10, 10, 0.92);
-      backdrop-filter: blur(12px);
+
+      padding: 0 6%;
+
+      border-bottom: 1px solid #eeeeee;
+
       z-index: 1000;
-      border-bottom: 1px solid #292929;
     }
 
     .logo {
-      color: #fff;
-      text-decoration: none;
       font-size: 20px;
       font-weight: 900;
       letter-spacing: 4px;
@@ -51,149 +62,255 @@
 
     nav {
       display: flex;
-      gap: 28px;
+      align-items: center;
+      gap: 32px;
     }
 
     nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
+      color: #222;
       transition: 0.2s;
     }
 
     nav a:hover {
-      opacity: 0.55;
+      opacity: 0.5;
     }
 
-    /* HERO */
+    .header-button {
+      padding: 11px 18px;
+      background: #111;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: 100vh;
-      padding: 150px 8% 90px;
+      padding-top: 76px;
+
       background:
-        radial-gradient(circle at 75% 35%, #333 0%, transparent 35%),
-        linear-gradient(135deg, #050505, #171717 60%, #292929);
-      color: #fff;
+        linear-gradient(
+          90deg,
+          #080808 0%,
+          #151515 48%,
+          #292929 100%
+        );
+
+      color: white;
+
       display: flex;
       align-items: center;
     }
 
-    .hero-content {
-      max-width: 900px;
+    .hero-inner {
+      width: 100%;
+      max-width: 1250px;
+      margin: auto;
+
+      padding: 80px 6%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
     }
 
-    .hero-label {
+    .hero-text {
+      max-width: 700px;
+    }
+
+    .hero-small {
       font-size: 12px;
-      letter-spacing: 5px;
-      color: #aaa;
-      margin-bottom: 28px;
+      letter-spacing: 4px;
+      color: #999;
+      margin-bottom: 25px;
       text-transform: uppercase;
     }
 
     .hero h1 {
-      font-size: clamp(65px, 12vw, 150px);
-      line-height: 0.82;
-      letter-spacing: -7px;
+      font-size: clamp(55px, 9vw, 120px);
+      line-height: 0.85;
+      letter-spacing: -6px;
       font-weight: 900;
-      margin-bottom: 45px;
+      margin-bottom: 35px;
+    }
+
+    .hero-description {
+      max-width: 420px;
+      color: #aaa;
+      line-height: 1.7;
+      font-size: 15px;
+      margin-bottom: 35px;
     }
 
     .hero-button {
       display: inline-block;
-      padding: 18px 32px;
-      background: #fff;
+
+      background: white;
       color: #111;
-      text-decoration: none;
-      font-size: 14px;
+
+      padding: 17px 28px;
+
+      font-size: 13px;
       font-weight: 800;
-      letter-spacing: 1px;
+
       transition: 0.25s;
     }
 
     .hero-button:hover {
-      background: #ddd;
       transform: translateY(-3px);
+      background: #dddddd;
     }
 
-    /* CATEGORIAS */
+    .hero-number {
+      font-size: 180px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.035);
+      user-select: none;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 110px 6%;
+      text-align: center;
+    }
+
+    .intro span {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #888;
+    }
+
+    .intro h2 {
+      font-size: clamp(38px, 6vw, 70px);
+      letter-spacing: -3px;
+      margin: 18px auto;
+      max-width: 850px;
+    }
+
+    .intro p {
+      max-width: 600px;
+      margin: auto;
+      color: #777;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       CATEGORIAS
+    ========================= */
 
     .categories {
-      padding: 100px 6%;
-      background: #fff;
+      padding: 20px 6% 110px;
     }
 
-    .section-heading {
+    .section-top {
       max-width: 1200px;
-      margin: 0 auto 45px;
+      margin: 0 auto 40px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
     }
 
-    .section-heading span {
-      font-size: 12px;
-      color: #888;
+    .section-top span {
+      font-size: 11px;
       letter-spacing: 3px;
-      font-weight: 700;
+      color: #888;
     }
 
-    .section-heading h2 {
-      font-size: clamp(40px, 6vw, 70px);
-      letter-spacing: -3px;
-      margin-top: 8px;
+    .section-top h2 {
+      font-size: 45px;
+      letter-spacing: -2px;
+      margin-top: 7px;
     }
 
     .category-grid {
       max-width: 1200px;
       margin: auto;
+
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
+      gap: 14px;
     }
 
     .category {
-      height: 300px;
-      background: #111;
+      height: 330px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #111,
+          #333
+        );
+
+      color: white;
+
       display: flex;
       align-items: flex-end;
+
       padding: 25px;
-      text-decoration: none;
+
+      position: relative;
       overflow: hidden;
-      position: relative;
+
       transition: 0.3s;
-    }
-
-    .category::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        transparent 35%,
-        rgba(0,0,0,0.8)
-      );
-    }
-
-    .category span {
-      color: #fff;
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      position: relative;
-      z-index: 2;
     }
 
     .category:hover {
       transform: translateY(-6px);
     }
 
-    /* PRODUTOS */
+    .category::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50%;
+
+      top: 30px;
+      right: -50px;
+    }
+
+    .category-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .category small {
+      display: block;
+      color: #999;
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .category h3 {
+      font-size: 24px;
+    }
+
+    /* =========================
+       PRODUTOS
+    ========================= */
 
     .products {
-      padding: 100px 6%;
-      background: #f4f4f4;
+      background: #f5f5f5;
+      padding: 110px 6%;
     }
 
     .product-grid {
       max-width: 1200px;
       margin: auto;
+
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
@@ -201,7 +318,7 @@
 
     .product {
       background: #fff;
-      transition: 0.25s;
+      transition: 0.3s;
     }
 
     .product:hover {
@@ -209,13 +326,21 @@
     }
 
     .product-image {
-      height: 340px;
-      background: #e5e5e5;
+      height: 350px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #dedede,
+          #f3f3f3
+        );
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       color: #999;
-      font-size: 12px;
+      font-size: 10px;
       letter-spacing: 2px;
     }
 
@@ -224,156 +349,233 @@
     }
 
     .product-info h3 {
-      font-size: 16px;
+      font-size: 15px;
       margin-bottom: 8px;
     }
 
     .product-info p {
-      font-size: 13px;
-      color: #777;
+      color: #888;
+      font-size: 12px;
     }
 
-    /* SOBRE */
+    /* =========================
+       BENEFÍCIOS
+    ========================= */
+
+    .benefits {
+      padding: 80px 6%;
+      border-bottom: 1px solid #eee;
+    }
+
+    .benefit-grid {
+      max-width: 1100px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+
+      text-align: center;
+    }
+
+    .benefit {
+      padding: 20px;
+    }
+
+    .benefit-number {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    .benefit h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .benefit p {
+      color: #777;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       SOBRE
+    ========================= */
 
     .about {
-      padding: 120px 8%;
-      background: #0a0a0a;
-      color: #fff;
+      padding: 130px 6%;
+
+      background: #0b0b0b;
+      color: white;
+
       text-align: center;
     }
 
     .about span {
-      color: #777;
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 4px;
+      color: #777;
     }
 
     .about h2 {
-      font-size: clamp(45px, 8vw, 90px);
-      letter-spacing: -4px;
-      margin: 20px 0;
+      font-size: clamp(50px, 9vw, 110px);
+      letter-spacing: -6px;
+      margin: 20px 0 30px;
     }
 
     .about p {
-      max-width: 600px;
+      max-width: 620px;
       margin: auto;
-      color: #aaa;
+
+      color: #999;
+
       line-height: 1.8;
-      font-size: 16px;
     }
 
-    /* WHATSAPP */
+    /* =========================
+       WHATSAPP
+    ========================= */
 
     .whatsapp {
       position: fixed;
+
       right: 20px;
       bottom: 20px;
-      z-index: 2000;
-      padding: 15px 22px;
-      border-radius: 50px;
+
       background: #111;
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 800;
+      color: white;
+
+      padding: 15px 22px;
+
+      border-radius: 50px;
+
+      font-size: 12px;
+      font-weight: 700;
+
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+      z-index: 2000;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      padding: 30px;
       background: #050505;
       color: #666;
+
+      padding: 35px 20px;
+
       text-align: center;
-      font-size: 12px;
+
+      font-size: 11px;
     }
 
-    /* CELULAR */
+    /* =========================
+       RESPONSIVO
+    ========================= */
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
 
       header {
-        height: 70px;
         padding: 0 20px;
       }
 
-      .logo {
-        font-size: 17px;
-        letter-spacing: 3px;
-      }
-
       nav {
-        gap: 13px;
+        gap: 15px;
       }
 
       nav a {
         font-size: 11px;
       }
 
-      .hero {
-        padding: 130px 25px 70px;
+      .header-button {
+        display: none;
       }
 
-      .hero h1 {
-        font-size: 65px;
-        letter-spacing: -4px;
+      .hero-inner {
+        padding: 70px 25px;
+      }
+
+      .hero-number {
+        display: none;
       }
 
       .category-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .category {
-        height: 200px;
-      }
-
       .product-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
       }
 
-      .product-image {
-        height: 240px;
+      .benefit-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
       }
+
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 500px) {
+
+      .logo {
+        font-size: 16px;
+        letter-spacing: 3px;
+      }
 
       nav a:nth-child(3) {
         display: none;
       }
 
       .hero h1 {
-        font-size: 58px;
+        font-size: 60px;
+        letter-spacing: -4px;
       }
 
-      .hero-button {
-        width: 100%;
-        text-align: center;
+      .hero-description {
+        font-size: 14px;
       }
 
-      .category-grid {
-        gap: 10px;
+      .section-top h2 {
+        font-size: 36px;
       }
 
       .category {
-        height: 160px;
+        height: 190px;
         padding: 18px;
       }
 
-      .category span {
-        font-size: 15px;
+      .category h3 {
+        font-size: 18px;
       }
 
       .product-image {
-        height: 210px;
+        height: 230px;
       }
+
+      .product-info {
+        padding: 15px;
+      }
+
+      .product-info h3 {
+        font-size: 13px;
+      }
+
+      .about h2 {
+        letter-spacing: -4px;
+      }
+
     }
+
   </style>
 </head>
 
 <body>
+
+
+  <!-- HEADER -->
 
   <header>
 
@@ -383,58 +585,122 @@
 
     <nav>
       <a href="#inicio">Início</a>
+      <a href="#categorias">Categorias</a>
       <a href="#produtos">Produtos</a>
       <a href="#sobre">Sobre</a>
     </nav>
 
+    <a href="#produtos" class="header-button">
+      COMPRAR
+    </a>
+
   </header>
 
 
+  <!-- HERO -->
+
   <section class="hero" id="inicio">
 
-    <div class="hero-content">
+    <div class="hero-inner">
 
-      <div class="hero-label">
-        GUEDES STORE
+      <div class="hero-text">
+
+        <div class="hero-small">
+          BEM-VINDO À GUEDES STORE
+        </div>
+
+        <h1>
+          GUEDES<br>
+          STORE
+        </h1>
+
+        <p class="hero-description">
+          Descubra peças selecionadas para quem tem estilo,
+          identidade e atitude.
+        </p>
+
+        <a href="#produtos" class="hero-button">
+          VER COLEÇÃO
+        </a>
+
       </div>
 
-      <h1>
-        GUEDES<br>
-        STORE
-      </h1>
-
-      <a href="#produtos" class="hero-button">
-        VER PRODUTOS
-      </a>
+      <div class="hero-number">
+        GS
+      </div>
 
     </div>
 
   </section>
 
 
-  <section class="categories">
+  <!-- INTRO -->
 
-    <div class="section-heading">
-      <span>EXPLORE</span>
-      <h2>Categorias</h2>
+  <section class="intro">
+
+    <span>NOVA EXPERIÊNCIA</span>
+
+    <h2>
+      Seu estilo começa aqui.
+    </h2>
+
+    <p>
+      Explore a Guedes Store e encontre peças que combinam
+      com a sua identidade.
+    </p>
+
+  </section>
+
+
+  <!-- CATEGORIAS -->
+
+  <section class="categories" id="categorias">
+
+    <div class="section-top">
+
+      <div>
+        <span>EXPLORE</span>
+        <h2>Categorias</h2>
+      </div>
+
     </div>
 
     <div class="category-grid">
 
       <a href="#produtos" class="category">
-        <span>CAMISETAS</span>
+
+        <div class="category-content">
+          <small>01</small>
+          <h3>Camisetas</h3>
+        </div>
+
       </a>
 
       <a href="#produtos" class="category">
-        <span>CALÇAS</span>
+
+        <div class="category-content">
+          <small>02</small>
+          <h3>Calças</h3>
+        </div>
+
       </a>
 
       <a href="#produtos" class="category">
-        <span>SHORTS</span>
+
+        <div class="category-content">
+          <small>03</small>
+          <h3>Shorts</h3>
+        </div>
+
       </a>
 
       <a href="#produtos" class="category">
-        <span>ACESSÓRIOS</span>
+
+        <div class="category-content">
+          <small>04</small>
+          <h3>Acessórios</h3>
+        </div>
+
       </a>
 
     </div>
@@ -442,16 +708,23 @@
   </section>
 
 
+  <!-- PRODUTOS -->
+
   <section class="products" id="produtos">
 
-    <div class="section-heading">
-      <span>GUEDES STORE</span>
-      <h2>Produtos</h2>
+    <div class="section-top">
+
+      <div>
+        <span>DESTAQUES</span>
+        <h2>Produtos</h2>
+      </div>
+
     </div>
 
     <div class="product-grid">
 
       <div class="product">
+
         <div class="product-image">
           FOTO DO PRODUTO
         </div>
@@ -460,9 +733,12 @@
           <h3>Produto 01</h3>
           <p>Confira disponibilidade</p>
         </div>
+
       </div>
 
+
       <div class="product">
+
         <div class="product-image">
           FOTO DO PRODUTO
         </div>
@@ -471,9 +747,12 @@
           <h3>Produto 02</h3>
           <p>Confira disponibilidade</p>
         </div>
+
       </div>
 
+
       <div class="product">
+
         <div class="product-image">
           FOTO DO PRODUTO
         </div>
@@ -482,9 +761,12 @@
           <h3>Produto 03</h3>
           <p>Confira disponibilidade</p>
         </div>
+
       </div>
 
+
       <div class="product">
+
         <div class="product-image">
           FOTO DO PRODUTO
         </div>
@@ -493,6 +775,7 @@
           <h3>Produto 04</h3>
           <p>Confira disponibilidade</p>
         </div>
+
       </div>
 
     </div>
@@ -500,28 +783,104 @@
   </section>
 
 
+  <!-- BENEFÍCIOS -->
+
+  <section class="benefits">
+
+    <div class="benefit-grid">
+
+      <div class="benefit">
+
+        <div class="benefit-number">
+          01
+        </div>
+
+        <h3>Atendimento</h3>
+
+        <p>
+          Fale diretamente com a Guedes Store
+          pelo WhatsApp.
+        </p>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <div class="benefit-number">
+          02
+        </div>
+
+        <h3>Peças selecionadas</h3>
+
+        <p>
+          Produtos escolhidos pensando em
+          estilo e identidade.
+        </p>
+
+      </div>
+
+
+      <div class="benefit">
+
+        <div class="benefit-number">
+          03
+        </div>
+
+        <h3>Experiência Guedes</h3>
+
+        <p>
+          Uma experiência de compra simples,
+          moderna e personalizada.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOBRE -->
+
   <section class="about" id="sobre">
 
-    <span>SOBRE A MARCA</span>
+    <span>GUEDES STORE</span>
 
-    <h2>GUEDES STORE</h2>
+    <h2>
+      IDENTIDADE.
+    </h2>
 
     <p>
-      Estilo, identidade e atitude.
-      Uma loja criada para quem escolhe se destacar.
+      A Guedes Store nasceu para unir moda,
+      estilo e personalidade em uma experiência
+      simples e marcante.
     </p>
 
   </section>
 
 
-  <a class="whatsapp" href="https://wa.me/" target="_blank">
+  <!-- WHATSAPP -->
+
+  <a
+    href="https://wa.me/"
+    target="_blank"
+    class="whatsapp">
+
     WhatsApp
+
   </a>
 
 
+  <!-- FOOTER -->
+
   <footer>
-    © 2026 Guedes Store. Todos os direitos reservados.
+
+    © 2026 Guedes Store.
+    Todos os direitos reservados.
+
   </footer>
+
 
 </body>
 </html>
