@@ -1,105 +1,581 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guedes Store | Moda Masculina</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#151515}
-header{background:#111;color:#fff;position:sticky;top:0;z-index:10}
-.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:18px 22px}
-.logo{font-size:25px;font-weight:800;letter-spacing:1px}
-.logo span{color:#aaa}
-nav a{color:#fff;text-decoration:none;margin-left:24px;font-size:14px}
-.hero{background:linear-gradient(120deg,#111,#444);color:white;min-height:430px;display:flex;align-items:center}
-.hero-inner{max-width:1200px;width:100%;margin:auto;padding:55px 22px}
-.hero h1{font-size:clamp(40px,7vw,72px);line-height:.95;max-width:650px}
-.hero p{margin:22px 0;font-size:18px;color:#ddd}
-.btn{display:inline-block;background:#fff;color:#111;padding:14px 24px;text-decoration:none;font-weight:700;border-radius:4px}
-section{max-width:1200px;margin:auto;padding:55px 22px}
-.title{text-align:center;margin-bottom:30px}
-.title h2{font-size:30px}.title p{color:#666;margin-top:8px}
-.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.category{background:#222;color:white;padding:35px 15px;text-align:center;border-radius:5px;font-weight:700}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.card{background:#fff;border-radius:7px;overflow:hidden;box-shadow:0 3px 14px #00000012}
-.photo{height:270px;background:linear-gradient(135deg,#ddd,#888);display:flex;align-items:center;justify-content:center;color:#555;font-weight:bold}
-.info{padding:16px}.info h3{font-size:17px}.price{font-size:20px;font-weight:800;margin:10px 0}.buy{display:block;text-align:center;background:#111;color:#fff;text-decoration:none;padding:11px;border-radius:4px}
-.about{background:#fff;max-width:none}.about-inner{max-width:900px;margin:auto;text-align:center;padding:55px 22px}.about p{color:#555;line-height:1.7;margin-top:15px}
-footer{background:#111;color:#ddd;text-align:center;padding:35px 20px}footer strong{color:white}
-.whatsapp{position:fixed;right:20px;bottom:20px;background:#222;color:white;padding:14px 18px;border-radius:30px;text-decoration:none;font-weight:bold;box-shadow:0 4px 15px #0004}
-.logo img{
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  width:120px;
+  <title>Guedes Store</title>
 
-  height:auto;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  display:block;
+    html {
+      scroll-behavior: smooth;
+    }
 
-}
-@media(max-width:800px){.categories,.products{grid-template-columns:repeat(2,1fr)}nav a{margin-left:10px}.hero{min-height:370px}}
-@media(max-width:480px){.nav{padding:15px}.logo{font-size:20px}nav a{font-size:12px}.categories,.products{grid-template-columns:1fr 1fr}.photo{height:210px}section{padding:40px 14px}}
-.nav {
-  align-items: center;
-}
-</style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      width: 100%;
+      height: 82px;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #292929;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: calc(100vh - 82px);
+      background:
+        linear-gradient(
+          110deg,
+          #111 0%,
+          #1c1c1c 48%,
+          #353535 100%
+        );
+
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero-small {
+      color: #aaa;
+      font-size: 13px;
+      letter-spacing: 4px;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(58px, 10vw, 120px);
+      line-height: 0.86;
+      font-weight: 900;
+      letter-spacing: -5px;
+      margin-bottom: 38px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      background: #fff;
+      color: #111;
+      padding: 19px 34px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      transition: 0.25s;
+    }
+
+    .hero-button:hover {
+      transform: translateY(-3px);
+      background: #ddd;
+    }
+
+    /* =========================
+       CATEGORIAS
+    ========================= */
+
+    .categories {
+      padding: 90px 6%;
+      background: #fff;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title h2 {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #777;
+      font-size: 18px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .category {
+      min-height: 220px;
+      background: #202020;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      overflow: hidden;
+      transition: 0.25s;
+    }
+
+    .category span {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      background: #111;
+    }
+
+    /* =========================
+       PRODUTOS
+    ========================= */
+
+    .products {
+      padding: 90px 6%;
+      background: #f5f5f5;
+    }
+
+    .product-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 300px;
+      background: #e8e8e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 13px;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .product-info p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* =========================
+       SOBRE
+    ========================= */
+
+    .about {
+      padding: 100px 8%;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 650px;
+      margin: auto;
+      color: #aaa;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2000;
+
+      background: #1d1d1d;
+      color: #fff;
+
+      padding: 15px 21px;
+      border-radius: 50px;
+
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      transition: 0.2s;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #080808;
+      color: #777;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13px;
+    }
+
+    /* =========================
+       CELULAR
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      header {
+        height: 72px;
+        padding: 0 20px;
+      }
+
+      .logo {
+        font-size: 18px;
+        letter-spacing: 3px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: calc(100vh - 72px);
+        padding: 60px 25px;
+      }
+
+      .hero h1 {
+        font-size: 65px;
+        letter-spacing: -3px;
+      }
+
+      .hero-small {
+        font-size: 11px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .category {
+        min-height: 170px;
+      }
+
+      .category span {
+        font-size: 17px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .product-image {
+        height: 220px;
+      }
+
+      .section-title h2 {
+        font-size: 38px;
+      }
+
+      .about h2 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 450px) {
+
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .hero-button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .category {
+        min-height: 150px;
+      }
+
+      .whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 13px 17px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="logo">
-  <img src="IMG_1073.jpeg" alt="Guedes Store">
-</div>
+  <!-- HEADER -->
+
+  <header>
+    <a href="#inicio" class="logo">GUEDES STORE</a>
+
     <nav>
       <a href="#inicio">Início</a>
       <a href="#produtos">Produtos</a>
       <a href="#sobre">Sobre</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-<section class="hero" id="inicio">
-  <div class="hero-inner">
-    <h1>GUEDES<br>STORE</h1>
-    <a class="btn" href="#produtos">VER PRODUTOS</a>
-  </div>
-</section>
-</section>
-  <div class="title"><h2>Categorias</h2><p>Encontre seu próximo look</p></div>
-  <div class="categories">
-    <div class="category">CAMISETAS</div>
-    <div class="category">CALÇAS</div>
-    <div class="category">SHORTS</div>
-    <div class="category">ACESSÓRIOS</div>
-  </div>
-</section>
 
-<section id="produtos">
-  <div class="title"><h2>Destaques</h2><p>Confira alguns dos nossos produtos</p></div>
-  <div class="products">
-    <article class="card"><div class="photo">FOTO DO PRODUTO</div><div class="info"><h3>Camiseta Premium</h3><div class="price">R$ 79,90</div><a class="buy" href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20na%20Camiseta%20Premium." target="_blank">Comprar</a></div></article>
-    <article class="card"><div class="photo">FOTO DO PRODUTO</div><div class="info"><h3>Camiseta Oversized</h3><div class="price">R$ 89,90</div><a class="buy" href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20na%20Camiseta%20Oversized." target="_blank">Comprar</a></div></article>
-    <article class="card"><div class="photo">FOTO DO PRODUTO</div><div class="info"><h3>Calça Masculina</h3><div class="price">R$ 129,90</div><a class="buy" href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20na%20Calça%20Masculina." target="_blank">Comprar</a></div></article>
-    <article class="card"><div class="photo">FOTO DO PRODUTO</div><div class="info"><h3>Shorts Casual</h3><div class="price">R$ 69,90</div><a class="buy" href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20Shorts%20Casual." target="_blank">Comprar</a></div></article>
-  </div>
-</section>
+  <!-- HERO -->
 
-<div class="about" id="sobre">
-  <div class="about-inner">
-    <div class="title"><h2>Sobre a Guedes Store</h2></div>
-    <p>A Guedes Store é uma loja de moda masculina criada para quem busca estilo, praticidade e peças que combinam com diferentes momentos.</p>
-  </div>
-</div>
-</main>
+  <section class="hero" id="inicio">
 
-<footer>
-  <strong>GUEDES STORE</strong>
-  <p style="margin-top:10px">Moda masculina • Instagram • WhatsApp</p>
-  <p style="margin-top:12px;font-size:13px">© 2026 Guedes Store. Todos os direitos reservados.</p>
-</footer>
+    <div class="hero-content">
 
-<a class="whatsapp" href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
+      <div class="hero-small">
+        GUEDES STORE
+      </div>
+
+      <h1>
+        GUEDES<br>
+        STORE
+      </h1>
+
+      <a href="#produtos" class="hero-button">
+        VER PRODUTOS
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIAS -->
+
+  <section class="categories">
+
+    <div class="section-title">
+
+      <h2>Categorias</h2>
+
+      <p>
+        Encontre seu próximo look
+      </p>
+
+    </div>
+
+    <div class="category-grid">
+
+      <a href="#produtos" class="category">
+        <span>CAMISETAS</span>
+      </a>
+
+      <a href="#produtos" class="category">
+        <span>CALÇAS</span>
+      </a>
+
+      <a href="#produtos" class="category">
+        <span>SHORTS</span>
+      </a>
+
+      <a href="#produtos" class="category">
+        <span>ACESSÓRIOS</span>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUTOS -->
+
+  <section class="products" id="produtos">
+
+    <div class="section-title">
+
+      <h2>Produtos</h2>
+
+      <p>
+        Confira nossas peças
+      </p>
+
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product">
+
+        <div class="product-image">
+          PRODUTO
+        </div>
+
+        <div class="product-info">
+          <h3>Produto 01</h3>
+          <p>Confira disponibilidade</p>
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          PRODUTO
+        </div>
+
+        <div class="product-info">
+          <h3>Produto 02</h3>
+          <p>Confira disponibilidade</p>
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          PRODUTO
+        </div>
+
+        <div class="product-info">
+          <h3>Produto 03</h3>
+          <p>Confira disponibilidade</p>
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+          PRODUTO
+        </div>
+
+        <div class="product-info">
+          <h3>Produto 04</h3>
+          <p>Confira disponibilidade</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOBRE -->
+
+  <section class="about" id="sobre">
+
+    <h2>GUEDES STORE</h2>
+
+    <p>
+      Moda, estilo e identidade.
+      Explore nossas peças e encontre seu próximo look.
+    </p>
+
+  </section>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/"
+    target="_blank">
+    WhatsApp
+  </a>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Guedes Store. Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
