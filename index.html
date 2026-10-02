@@ -537,7 +537,33 @@ PRODUTOS
     font-size:12px;
     color:#888;
 }
+/* =========================
+PESQUISA
+========================= */
 
+.search-box{
+    max-width:1300px;
+    margin:0 auto 35px;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    padding:18px 22px;
+    border:1px solid #ddd;
+    background:#fff;
+    color:#111;
+    font-size:13px;
+    outline:none;
+}
+
+.search-box input:focus{
+    border-color:#111;
+}
+
+.search-box input::placeholder{
+    color:#999;
+}
 /* =========================
 SOBRE
 ========================= */
@@ -855,8 +881,6 @@ CELULAR
             VER TODOS
         </a>
 
-    </div>
-
 
     <div class="category-grid">
 
@@ -973,8 +997,9 @@ CELULAR
         </a>
 
     </div>
-
-
+<div class="search-box">
+    <input type="text" id="productSearch" placeholder="🔎 Pesquisar produtos...">
+</div>
     <div class="product-grid">
 
         <div class="product">
