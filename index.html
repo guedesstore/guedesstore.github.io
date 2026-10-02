@@ -219,56 +219,88 @@ BANNER
 ROUPAS NO BANNER
 ========================= */
 
-/* CARD CENTRAL */
+/* =========================
+ELEMENTO GRÁFICO
+========================= */
 
-.visual-card{
+.graphic-circle{
     position:absolute;
-
-    width:280px;
-    height:390px;
-
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%,-50%) rotate(-4deg);
-
-    background:
-        linear-gradient(
-            145deg,
-            #555 0%,
-            #292929 42%,
-            #101010 100%
-        );
-
-    border:1px solid rgba(255,255,255,.15);
-
-    box-shadow:
-        0 40px 90px rgba(0,0,0,.7);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    transition:.4s;
-}
-
-.visual-card:hover{
-    transform:translate(-50%,-50%) rotate(0deg) scale(1.02);
-}
-
-.visual-card::before{
-    content:"";
-    position:absolute;
-    inset:18px;
     border:1px solid rgba(255,255,255,.12);
+    border-radius:50%;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
 }
 
-.visual-card span{
-    position:relative;
-    font-size:95px;
+.circle-1{
+    width:520px;
+    height:520px;
+}
+
+.circle-2{
+    width:380px;
+    height:380px;
+}
+
+.circle-3{
+    width:240px;
+    height:240px;
+    border-color:rgba(255,255,255,.2);
+}
+
+.graphic-line{
+    position:absolute;
+    width:520px;
+    height:1px;
+    background:rgba(255,255,255,.1);
+    left:50%;
+    top:50%;
+    transform-origin:center;
+}
+
+.line-1{
+    transform:translate(-50%,-50%) rotate(35deg);
+}
+
+.line-2{
+    transform:translate(-50%,-50%) rotate(-35deg);
+}
+
+.graphic-logo{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+
+    font-size:120px;
     font-weight:900;
-    letter-spacing:-9px;
-    color:#eee;
+    letter-spacing:-12px;
+    color:#f1f1f1;
+
+    text-shadow:
+        0 20px 50px rgba(0,0,0,.8);
+}
+
+.graphic-label{
+    position:absolute;
+    left:50%;
+    bottom:18%;
+    transform:translateX(-50%);
+
+    font-size:9px;
+    letter-spacing:6px;
+    color:#888;
+    white-space:nowrap;
+}
+
+.graphic-year{
+    position:absolute;
+    right:8%;
+    bottom:8%;
+
+    font-size:9px;
+    letter-spacing:3px;
+    color:#666;
 }
 
 /* =========================
