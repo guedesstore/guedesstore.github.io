@@ -1124,6 +1124,26 @@ CELULAR
 <a href="https://wa.me/" target="_blank" class="whatsapp">
     WHATSAPP
 </a>
+<script>
+function searchProducts(){
 
+    const search = document.getElementById("productSearch").value.toLowerCase();
+
+    const products = document.querySelectorAll(".product");
+
+    products.forEach(function(product){
+
+        const name = product.innerText.toLowerCase();
+
+        if(name.includes(search)){
+            product.style.display = "";
+        }else{
+            product.style.display = "none";
+        }
+
+    });
+
+}
+</script>
 </body>
 </html>
