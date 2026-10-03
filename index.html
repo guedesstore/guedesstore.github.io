@@ -8,10 +8,6 @@
 
 <style>
 
-/* =========================
-RESET
-========================= */
-
 *{
     margin:0;
     padding:0;
@@ -73,26 +69,6 @@ nav{
 nav a{
     font-size:12px;
     font-weight:700;
-    transition:.2s;
-}
-
-nav a:hover{
-    opacity:.45;
-}
-
-.header-button{
-    border:1px solid #111;
-    padding:10px 17px;
-
-    font-size:11px;
-    font-weight:800;
-
-    transition:.2s;
-}
-
-.header-button:hover{
-    background:#111;
-    color:#fff;
 }
 
 
@@ -113,7 +89,6 @@ BANNER
 .hero-container{
     width:100%;
     max-width:1500px;
-
     min-height:calc(100vh - 74px);
 
     margin:auto;
@@ -134,26 +109,21 @@ BANNER
 
     padding:70px 7%;
 
-    z-index:2;
+    z-index:5;
 }
 
 .welcome{
     font-size:10px;
     letter-spacing:5px;
-
     color:#888;
-
     margin-bottom:28px;
 }
 
 .hero h1{
     font-size:clamp(65px,9vw,135px);
-
     line-height:.78;
     letter-spacing:-8px;
-
     font-weight:900;
-
     margin-bottom:38px;
 }
 
@@ -183,19 +153,10 @@ BANNER
     font-size:10px;
     font-weight:900;
     letter-spacing:2px;
-
-    transition:.25s;
-}
-
-.hero-button:hover{
-    transform:translateY(-4px);
-    background:#ddd;
 }
 
 
-/* =========================
-ÁREA DAS ROUPAS
-========================= */
+/* ÁREA DAS FOTOS */
 
 .hero-visual{
     position:relative;
@@ -211,9 +172,6 @@ BANNER
             #090909 75%
         );
 }
-
-
-/* TEXTO DE FUNDO */
 
 .hero-visual::before{
     content:"GUEDES";
@@ -236,28 +194,33 @@ BANNER
 }
 
 
-/* FOTOS */
+/* CONTAINER DAS FOTOS */
 
 .clothing-showcase{
     position:absolute;
+
     inset:0;
+
     width:100%;
     height:100%;
 }
 
+
+/* FOTOS */
+
 .clothing-item{
     position:absolute;
 
-    width:150px;
-    height:190px;
+    width:115px;
+    height:150px;
 
     overflow:hidden;
 
     border-radius:4px;
 
-    transition:.3s;
-
     z-index:2;
+
+    transition:.3s;
 }
 
 .clothing-item img{
@@ -277,32 +240,37 @@ BANNER
 /* POSIÇÃO DAS 5 FOTOS */
 
 .clothing-item:nth-child(1){
-    top:5%;
-    left:2%;
+    top:8%;
+    left:5%;
+
     transform:rotate(-6deg);
 }
 
 .clothing-item:nth-child(2){
-    top:2%;
-    left:34%;
+    top:5%;
+    left:38%;
+
     transform:rotate(3deg);
 }
 
 .clothing-item:nth-child(3){
-    top:5%;
-    right:2%;
+    top:8%;
+    right:5%;
+
     transform:rotate(6deg);
 }
 
 .clothing-item:nth-child(4){
-    bottom:2%;
-    left:17%;
+    bottom:5%;
+    left:20%;
+
     transform:rotate(-4deg);
 }
 
 .clothing-item:nth-child(5){
-    bottom:2%;
-    right:17%;
+    bottom:5%;
+    right:20%;
+
     transform:rotate(4deg);
 }
 
@@ -351,25 +319,19 @@ CATEGORIAS
 
 .section-label{
     font-size:10px;
-
     color:#999;
-
     letter-spacing:4px;
-
     font-weight:700;
 }
 
 .section-title{
     font-size:clamp(42px,6vw,75px);
-
     letter-spacing:-4px;
-
     margin-top:8px;
 }
 
 .section-link{
     font-size:11px;
-
     font-weight:800;
 
     border-bottom:1px solid #111;
@@ -436,17 +398,13 @@ CATEGORIAS
 
 .category-number{
     font-size:10px;
-
     color:#aaa;
-
     letter-spacing:2px;
-
     margin-bottom:8px;
 }
 
 .category h3{
     font-size:27px;
-
     font-weight:800;
 }
 
@@ -538,6 +496,14 @@ DESTAQUE
     align-items:center;
 
     justify-content:center;
+
+    color:#777;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    font-weight:900;
 }
 
 
@@ -708,14 +674,6 @@ MARCAS
     letter-spacing:1px;
 
     border-right:1px solid #ddd;
-
-    transition:.2s;
-}
-
-.brand:hover{
-    background:#111;
-
-    color:#fff;
 }
 
 .brand:last-child{
@@ -769,13 +727,11 @@ WHATSAPP
     font-weight:800;
 
     z-index:2000;
-
-    box-shadow:0 10px 35px rgba(0,0,0,.25);
 }
 
 
 /* =========================
-CELULAR
+TABLET
 ========================= */
 
 @media(max-width:850px){
@@ -790,10 +746,6 @@ CELULAR
 
     nav a{
         font-size:10px;
-    }
-
-    .header-button{
-        display:none;
     }
 
     .hero-container{
@@ -815,33 +767,33 @@ CELULAR
     }
 
     .clothing-item{
-        width:125px;
-        height:160px;
+        width:100px;
+        height:130px;
     }
 
     .clothing-item:nth-child(1){
-        top:4%;
-        left:2%;
+        top:5%;
+        left:3%;
     }
 
     .clothing-item:nth-child(2){
-        top:2%;
-        left:50%;
+        top:3%;
+        left:38%;
     }
 
     .clothing-item:nth-child(3){
-        top:35%;
-        right:2%;
+        top:5%;
+        right:3%;
     }
 
     .clothing-item:nth-child(4){
-        bottom:2%;
-        left:5%;
+        bottom:4%;
+        left:15%;
     }
 
     .clothing-item:nth-child(5){
-        bottom:2%;
-        right:10%;
+        bottom:4%;
+        right:15%;
     }
 
     .brand-strip{
@@ -889,6 +841,10 @@ CELULAR
 }
 
 
+/* =========================
+CELULAR
+========================= */
+
 @media(max-width:500px){
 
     .logo{
@@ -909,33 +865,33 @@ CELULAR
     }
 
     .clothing-item{
-        width:105px;
-        height:135px;
+        width:82px;
+        height:108px;
     }
 
     .clothing-item:nth-child(1){
-        top:3%;
-        left:2%;
+        top:4%;
+        left:3%;
     }
 
     .clothing-item:nth-child(2){
         top:2%;
-        left:37%;
+        left:38%;
     }
 
     .clothing-item:nth-child(3){
-        top:5%;
-        right:2%;
+        top:4%;
+        right:3%;
     }
 
     .clothing-item:nth-child(4){
-        bottom:3%;
-        left:12%;
+        bottom:4%;
+        left:15%;
     }
 
     .clothing-item:nth-child(5){
-        bottom:3%;
-        right:12%;
+        bottom:4%;
+        right:15%;
     }
 
     .category-grid{
@@ -971,6 +927,7 @@ CELULAR
     .brand{
         border-right:none;
     }
+
 }
 
 </style>
@@ -980,9 +937,7 @@ CELULAR
 <body>
 
 
-<!-- =========================
-HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -1013,13 +968,12 @@ HEADER
 </header>
 
 
-<!-- =========================
-BANNER
-========================= -->
+<!-- BANNER -->
 
 <section class="hero" id="inicio">
 
     <div class="hero-container">
+
 
         <div class="hero-content">
 
@@ -1044,29 +998,37 @@ BANNER
         </div>
 
 
+        <!-- FOTOS DO BANNER -->
+
         <div class="hero-visual">
 
             <div class="clothing-showcase">
+
 
                 <div class="clothing-item">
                     <img src="IMG_1117.jpeg" alt="Moda masculina">
                 </div>
 
+
                 <div class="clothing-item">
                     <img src="IMG_1119.jpeg" alt="Moda masculina">
                 </div>
+
 
                 <div class="clothing-item">
                     <img src="IMG_1121.jpeg" alt="Moda masculina">
                 </div>
 
+
                 <div class="clothing-item">
                     <img src="IMG_1123.jpeg" alt="Moda masculina">
                 </div>
 
+
                 <div class="clothing-item">
                     <img src="IMG_1125.jpeg" alt="Moda masculina">
                 </div>
+
 
             </div>
 
@@ -1077,24 +1039,24 @@ BANNER
 </section>
 
 
-<!-- =========================
-FAIXA
-========================= -->
+<!-- FAIXA -->
 
 <div class="brand-strip">
 
     <span>GUEDES STORE</span>
+
     <span>MODA MASCULINA</span>
+
     <span>MULTIMARCAS</span>
+
     <span>ESTILO</span>
+
     <span>2026</span>
 
 </div>
 
 
-<!-- =========================
-CATEGORIAS
-========================= -->
+<!-- CATEGORIAS -->
 
 <section class="categories" id="categorias">
 
@@ -1120,6 +1082,7 @@ CATEGORIAS
 
 
     <div class="category-grid">
+
 
         <a href="#produtos" class="category">
 
@@ -1171,14 +1134,13 @@ CATEGORIAS
 
         </a>
 
+
     </div>
 
 </section>
 
 
-<!-- =========================
-DESTAQUE
-========================= -->
+<!-- DESTAQUE -->
 
 <section class="feature">
 
@@ -1207,19 +1169,13 @@ DESTAQUE
 
 
     <div class="feature-visual">
-
-        <div class="feature-placeholder">
-            GUEDES STORE
-        </div>
-
+        GUEDES STORE
     </div>
 
 </section>
 
 
-<!-- =========================
-PRODUTOS
-========================= -->
+<!-- PRODUTOS -->
 
 <section class="products" id="produtos">
 
@@ -1257,6 +1213,7 @@ PRODUTOS
 
 
     <div class="product-grid">
+
 
         <div class="product">
 
@@ -1341,14 +1298,13 @@ PRODUTOS
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- =========================
-MARCAS
-========================= -->
+<!-- MARCAS -->
 
 <section class="brands">
 
@@ -1397,9 +1353,7 @@ MARCAS
 </section>
 
 
-<!-- =========================
-FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1414,9 +1368,7 @@ FOOTER
 </footer>
 
 
-<!-- =========================
-WHATSAPP
-========================= -->
+<!-- WHATSAPP -->
 
 <a
     href="https://wa.me/"
@@ -1426,10 +1378,6 @@ WHATSAPP
     WHATSAPP
 </a>
 
-
-<!-- =========================
-PESQUISA
-========================= -->
 
 <script>
 
@@ -1468,5 +1416,4 @@ function searchProducts(){
 </script>
 
 
-</body>
-</html>
+</
