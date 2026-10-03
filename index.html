@@ -169,30 +169,17 @@ BANNER
 }
 
 /* LADO DIREITO */
+
 .hero-visual{
     position:relative;
-    width:55%;
-    height:430px;
+    width:100%;
+    height:100%;
+    min-height:500px;
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:10px;
     overflow:hidden;
 }
-.hero-visual img{
-    width:110px;
-    height:180px;
-    object-fit:cover;
-    display:block;
-}
-
-/* =========================
-ROUPAS NO BANNER
-========================= */
-
-/* =========================
-ELEMENTO GRÁFICO
-========================= */
 
 /* =========================
 FAIXA
@@ -224,13 +211,11 @@ CATEGORIAS
 
 .section-header{
     max-width:1300px;
-    margin:auto;
+    margin:0 auto 45px;
 
     display:flex;
     justify-content:space-between;
     align-items:end;
-
-    margin-bottom:45px;
 }
 
 .section-label{
@@ -378,6 +363,10 @@ DESTAQUE
     font-weight:800;
 }
 
+/* =========================
+ROUPAS ESPALHADAS
+========================= */
+
 .feature-visual{
     background:
         linear-gradient(135deg,#202020,#444);
@@ -385,6 +374,55 @@ DESTAQUE
     display:flex;
     align-items:center;
     justify-content:center;
+}
+
+.clothing-showcase{
+    width:100%;
+    height:100%;
+    min-height:500px;
+    position:relative;
+}
+
+.clothing-item{
+    position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    color:#ddd;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:2px;
+
+    background:linear-gradient(145deg,#444,#111);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.5);
+}
+
+.clothing-item:nth-child(1){
+    width:180px;
+    height:250px;
+    top:12%;
+    left:12%;
+    transform:rotate(-8deg);
+}
+
+.clothing-item:nth-child(2){
+    width:200px;
+    height:280px;
+    top:30%;
+    right:10%;
+    transform:rotate(7deg);
+}
+
+.clothing-item:nth-child(3){
+    width:130px;
+    height:130px;
+    bottom:10%;
+    left:40%;
+    transform:rotate(-4deg);
 }
 
 /* =========================
@@ -447,6 +485,7 @@ PRODUTOS
     font-size:12px;
     color:#888;
 }
+
 /* =========================
 PESQUISA
 ========================= */
@@ -460,9 +499,11 @@ PESQUISA
 .search-box input{
     width:100%;
     padding:18px 22px;
+
     border:1px solid #111;
     background:#111;
     color:#fff;
+
     font-size:13px;
     outline:none;
 }
@@ -474,55 +515,23 @@ PESQUISA
 .search-box input::placeholder{
     color:#999;
 }
-/* ROUPAS ESPALHADAS */
 
-.clothing-showcase{
-    width:100%;
-    height:100%;
-    min-height:500px;
-    position:relative;
-}
-
-.clothing-item{
-    position:absolute;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:1px solid rgba(255,255,255,.2);
-    color:#ddd;
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:2px;
-    background:linear-gradient(145deg,#444,#111);
-    box-shadow:0 25px 50px rgba(0,0,0,.5);
-}
-
-.clothing-item:nth-child(1){
-    width:180px;
-    height:250px;
-    top:12%;
-    left:12%;
-    transform:rotate(-8deg);
-}
-
-.clothing-item:nth-child(2){
-    width:200px;
-    height:280px;
-    top:30%;
-    right:10%;
-    transform:rotate(7deg);
-}
-
-.clothing-item:nth-child(3){
-    width:130px;
-    height:130px;
-    bottom:10%;
-    left:40%;
-    transform:rotate(-4deg);
-}
 /* =========================
-SOBRE
+MARCAS
 ========================= */
+
+.about{
+    padding:120px 5%;
+    background:#fff;
+    text-align:center;
+}
+
+.about-label{
+    font-size:10px;
+    letter-spacing:4px;
+    color:#999;
+    font-weight:700;
+}
 
 .brands-list{
     margin-top:35px;
@@ -535,10 +544,6 @@ SOBRE
     letter-spacing:3px;
     margin:18px 0;
 }
-
-/* =========================
-FOOTER
-========================= */
 
 /* =========================
 FOOTER
@@ -623,11 +628,6 @@ CELULAR
         height:470px;
     }
 
-    .visual-card{
-        width:245px;
-        height:340px;
-    }
-
     .brand-strip{
         overflow:hidden;
         white-space:nowrap;
@@ -687,15 +687,6 @@ CELULAR
         height:390px;
     }
 
-    .visual-card{
-        width:205px;
-        height:285px;
-    }
-
-    .visual-card span{
-        font-size:65px;
-    }
-
     .category-grid{
         grid-template-columns:1fr;
     }
@@ -724,22 +715,11 @@ CELULAR
         height:230px;
     }
 
-    .about h2{
-        letter-spacing:-5px;
+    .about{
+        padding:90px 5%;
     }
-.welcome-text{.welcome-text{
-    .welcome-text{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    font-size:48px;
-    font-weight:800;
-    letter-spacing:6px;
-    color:#e8e8e8;
-    white-space:nowrap;
-    text-align:center;
 }
+
 </style>
 </head>
 
@@ -755,7 +735,7 @@ CELULAR
         <a href="#inicio">Início</a>
         <a href="#categorias">Categorias</a>
         <a href="#produtos">Produtos</a>
-        <a href="#sobre">Sobre</a>
+        <a href="#marcas">Marcas</a>
     </nav>
 
     <a href="#produtos" class="header-cart">
@@ -764,6 +744,10 @@ CELULAR
 
 </header>
 
+
+<!-- =========================
+BANNER
+========================= -->
 
 <section class="hero" id="inicio">
 
@@ -785,10 +769,24 @@ CELULAR
                 presença, personalidade e identidade.
             </p>
 
- 
-</div>
+            <a href="#produtos" class="hero-button">
+                VER PRODUTOS
+            </a>
+
+        </div>
+
+        <div class="hero-visual">
+
+        </div>
+
+    </div>
+
 </section>
 
+
+<!-- =========================
+FAIXA
+========================= -->
 
 <div class="brand-strip">
 
@@ -800,6 +798,10 @@ CELULAR
 
 </div>
 
+
+<!-- =========================
+CATEGORIAS
+========================= -->
 
 <section class="categories" id="categorias">
 
@@ -820,6 +822,8 @@ CELULAR
         <a href="#produtos" class="section-link">
             VER TODOS
         </a>
+
+    </div>
 
 
     <div class="category-grid">
@@ -879,6 +883,10 @@ CELULAR
 </section>
 
 
+<!-- =========================
+DESTAQUE
+========================= -->
+
 <section class="feature">
 
     <div class="feature-content">
@@ -906,15 +914,31 @@ CELULAR
 
 
     <div class="feature-visual">
-<div class="clothing-showcase">
-    <div class="clothing-item">CAMISA</div>
-    <div class="clothing-item">JAQUETA</div>
-    <div class="clothing-item">BONÉ</div>
-</div>
+
+        <div class="clothing-showcase">
+
+            <div class="clothing-item">
+                CAMISA
+            </div>
+
+            <div class="clothing-item">
+                JAQUETA
+            </div>
+
+            <div class="clothing-item">
+                BONÉ
+            </div>
+
+        </div>
 
     </div>
 
+</section>
 
+
+<!-- =========================
+PRODUTOS
+========================= -->
 
 <section class="products" id="produtos">
 
@@ -937,9 +961,19 @@ CELULAR
         </a>
 
     </div>
-<div class="search-box">
-    <input type="text" id="productSearch" placeholder="🔎 Pesquisar produtos...">
-</div>
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="productSearch"
+            placeholder="🔎 Pesquisar produtos..."
+        >
+
+    </div>
+
+
     <div class="product-grid">
 
         <div class="product">
@@ -993,7 +1027,7 @@ CELULAR
             <div class="product-info">
 
                 <h3>
-                     Calça / Short Jogador
+                    Calça / Short Jogador
                 </h3>
 
                 <p>
@@ -1028,6 +1062,12 @@ CELULAR
     </div>
 
 </section>
+
+
+<!-- =========================
+MARCAS
+========================= -->
+
 <section class="about" id="marcas">
 
     <div class="about-label">
@@ -1035,15 +1075,23 @@ CELULAR
     </div>
 
     <div class="brands-list">
+
         <div>NIKE</div>
         <div>ADIDAS</div>
         <div>LACOSTE</div>
         <div>BROOKSFIELD</div>
         <div>TOMMY HILFIGER</div>
         <div>PUMA</div>
+
     </div>
 
 </section>
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
 <footer>
 
     <span>
@@ -1057,14 +1105,31 @@ CELULAR
 </footer>
 
 
-<a href="https://wa.me/5516994049604?text=Opa!%20Vim%20pela%20Guedes%20Store%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos." target="_blank" class="whatsapp">
+<!-- =========================
+WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/5516994049604?text=Opa!%20Vim%20pela%20Guedes%20Store%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos."
+    target="_blank"
+    class="whatsapp"
+>
     WHATSAPP
 </a>
 
+
+<!-- =========================
+PESQUISA
+========================= -->
+
 <script>
+
 function searchProducts(){
 
-    const search = document.getElementById("productSearch").value.toLowerCase();
+    const search = document
+        .getElementById("productSearch")
+        .value
+        .toLowerCase();
 
     const products = document.querySelectorAll(".product");
 
@@ -1073,14 +1138,24 @@ function searchProducts(){
         const name = product.innerText.toLowerCase();
 
         if(name.includes(search)){
+
             product.style.display = "";
+
         }else{
+
             product.style.display = "none";
+
         }
 
     });
 
-    
+}
+
+document
+    .getElementById("productSearch")
+    .addEventListener("input", searchProducts);
+
 </script>
+
 </body>
 </html>
