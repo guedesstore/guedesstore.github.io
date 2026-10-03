@@ -16,7 +16,7 @@ RESET
     margin:0;
     padding:0;
     box-sizing:border-box;
-    
+}
 
 html{
     scroll-behavior:smooth;
@@ -213,7 +213,7 @@ BANNER
 }
 
 
-/* texto grande de fundo */
+/* TEXTO DE FUNDO */
 
 .hero-visual::before{
     content:"GUEDES";
@@ -236,7 +236,7 @@ BANNER
 }
 
 
-/* espaço preparado para roupas */
+/* FOTOS */
 
 .clothing-showcase{
     position:absolute;
@@ -247,17 +247,25 @@ BANNER
 
 .clothing-item{
     position:absolute;
+
     width:150px;
     height:190px;
+
     overflow:hidden;
+
     border-radius:4px;
+
     transition:.3s;
+
+    z-index:2;
 }
 
 .clothing-item img{
     width:100%;
     height:100%;
+
     display:block;
+
     object-fit:cover;
 }
 
@@ -265,73 +273,37 @@ BANNER
     transform:scale(1.03);
 }
 
+
 /* POSIÇÃO DAS 5 FOTOS */
 
 .clothing-item:nth-child(1){
     top:5%;
-    left:5%;
-    transform:rotate(-8deg);
+    left:2%;
+    transform:rotate(-6deg);
 }
 
 .clothing-item:nth-child(2){
     top:2%;
-    left:35%;
-    transform:rotate(4deg);
+    left:34%;
+    transform:rotate(3deg);
 }
 
 .clothing-item:nth-child(3){
-    top:8%;
-    right:3%;
-    transform:rotate(8deg);
+    top:5%;
+    right:2%;
+    transform:rotate(6deg);
 }
 
 .clothing-item:nth-child(4){
-    bottom:5%;
-    left:12%;
-    transform:rotate(-5deg);
+    bottom:2%;
+    left:17%;
+    transform:rotate(-4deg);
 }
 
 .clothing-item:nth-child(5){
     bottom:2%;
-    right:8%;
-    transform:rotate(5deg);
-}
-/* roupa 1 */
-
-.clothing-item:nth-child(1){
-    width:220px;
-    height:300px;
-
-    top:10%;
-    left:12%;
-
-    transform:rotate(-8deg);
-}
-
-
-/* roupa 2 */
-
-.clothing-item:nth-child(2){
-    width:250px;
-    height:330px;
-
-    top:25%;
-    right:8%;
-
-    transform:rotate(7deg);
-}
-
-
-/* roupa 3 */
-
-.clothing-item:nth-child(3){
-    width:150px;
-    height:150px;
-
-    bottom:8%;
-    left:35%;
-
-    transform:rotate(-5deg);
+    right:17%;
+    transform:rotate(4deg);
 }
 
 
@@ -459,7 +431,6 @@ CATEGORIAS
 
 .category-content{
     position:relative;
-
     z-index:2;
 }
 
@@ -831,13 +802,11 @@ CELULAR
 
     .hero-content{
         padding:90px 25px 70px;
-
         min-height:600px;
     }
 
     .hero h1{
         font-size:70px;
-
         letter-spacing:-6px;
     }
 
@@ -845,9 +814,38 @@ CELULAR
         min-height:470px;
     }
 
+    .clothing-item{
+        width:125px;
+        height:160px;
+    }
+
+    .clothing-item:nth-child(1){
+        top:4%;
+        left:2%;
+    }
+
+    .clothing-item:nth-child(2){
+        top:2%;
+        left:50%;
+    }
+
+    .clothing-item:nth-child(3){
+        top:35%;
+        right:2%;
+    }
+
+    .clothing-item:nth-child(4){
+        bottom:2%;
+        left:5%;
+    }
+
+    .clothing-item:nth-child(5){
+        bottom:2%;
+        right:10%;
+    }
+
     .brand-strip{
         overflow:hidden;
-
         white-space:nowrap;
     }
 
@@ -885,9 +883,7 @@ CELULAR
 
     footer{
         flex-direction:column;
-
         gap:15px;
-
         text-align:center;
     }
 }
@@ -897,7 +893,6 @@ CELULAR
 
     .logo{
         font-size:15px;
-
         letter-spacing:3px;
     }
 
@@ -912,35 +907,36 @@ CELULAR
     .hero-visual{
         min-height:390px;
     }
-}.clothing-item:nth-child(1){
-    top:5%;
-    left:2%;
-    transform:rotate(-6deg);
-}
 
-.clothing-item:nth-child(2){
-    top:2%;
-    left:34%;
-    transform:rotate(3deg);
-}
+    .clothing-item{
+        width:105px;
+        height:135px;
+    }
 
-.clothing-item:nth-child(3){
-    top:5%;
-    right:2%;
-    transform:rotate(6deg);
-}
+    .clothing-item:nth-child(1){
+        top:3%;
+        left:2%;
+    }
 
-.clothing-item:nth-child(4){
-    bottom:2%;
-    left:17%;
-    transform:rotate(-4deg);
-}
+    .clothing-item:nth-child(2){
+        top:2%;
+        left:37%;
+    }
 
-.clothing-item:nth-child(5){
-    bottom:2%;
-    right:17%;
-    transform:rotate(4deg);
-}
+    .clothing-item:nth-child(3){
+        top:5%;
+        right:2%;
+    }
+
+    .clothing-item:nth-child(4){
+        bottom:3%;
+        left:12%;
+    }
+
+    .clothing-item:nth-child(5){
+        bottom:3%;
+        right:12%;
+    }
 
     .category-grid{
         grid-template-columns:1fr;
@@ -956,13 +952,11 @@ CELULAR
 
     .section-link{
         display:inline-block;
-
         margin-top:20px;
     }
 
     .product-grid{
         grid-template-columns:1fr 1fr;
-
         gap:10px;
     }
 
@@ -1027,9 +1021,6 @@ BANNER
 
     <div class="hero-container">
 
-
-        <!-- TEXTO -->
-
         <div class="hero-content">
 
             <div class="welcome">
@@ -1053,30 +1044,29 @@ BANNER
         </div>
 
 
-        <!-- ROUPAS -->
-<div class="clothing-showcase">
+        <div class="hero-visual">
 
-    <div class="clothing-item">
-        <img src="IMG_1117.jpeg" alt="Moda masculina">
-    </div>
+            <div class="clothing-showcase">
 
-    <div class="clothing-item">
-        <img src="IMG_1119.jpeg" alt="Moda masculina">
-    </div>
+                <div class="clothing-item">
+                    <img src="IMG_1117.jpeg" alt="Moda masculina">
+                </div>
 
-    <div class="clothing-item">
-        <img src="IMG_1121.jpeg" alt="Moda masculina">
-    </div>
+                <div class="clothing-item">
+                    <img src="IMG_1119.jpeg" alt="Moda masculina">
+                </div>
 
-    <div class="clothing-item">
-        <img src="IMG_1123.jpeg" alt="Moda masculina">
-    </div>
+                <div class="clothing-item">
+                    <img src="IMG_1121.jpeg" alt="Moda masculina">
+                </div>
 
-    <div class="clothing-item">
-        <img src="IMG_1125.jpeg" alt="Moda masculina">
-    </div>
+                <div class="clothing-item">
+                    <img src="IMG_1123.jpeg" alt="Moda masculina">
+                </div>
 
-</div>
+                <div class="clothing-item">
+                    <img src="IMG_1125.jpeg" alt="Moda masculina">
+                </div>
 
             </div>
 
@@ -1094,13 +1084,9 @@ FAIXA
 <div class="brand-strip">
 
     <span>GUEDES STORE</span>
-
     <span>MODA MASCULINA</span>
-
     <span>MULTIMARCAS</span>
-
     <span>ESTILO</span>
-
     <span>2026</span>
 
 </div>
@@ -1134,7 +1120,6 @@ CATEGORIAS
 
 
     <div class="category-grid">
-
 
         <a href="#produtos" class="category">
 
@@ -1186,7 +1171,6 @@ CATEGORIAS
 
         </a>
 
-
     </div>
 
 </section>
@@ -1224,20 +1208,8 @@ DESTAQUE
 
     <div class="feature-visual">
 
-        <div class="clothing-showcase">
-
-            <div class="clothing-item">
-                CAMISA
-            </div>
-
-            <div class="clothing-item">
-                JAQUETA
-            </div>
-
-            <div class="clothing-item">
-                BONÉ
-            </div>
-
+        <div class="feature-placeholder">
+            GUEDES STORE
         </div>
 
     </div>
@@ -1285,7 +1257,6 @@ PRODUTOS
 
 
     <div class="product-grid">
-
 
         <div class="product">
 
@@ -1369,7 +1340,6 @@ PRODUTOS
             </div>
 
         </div>
-
 
     </div>
 
