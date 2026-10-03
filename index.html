@@ -3,29 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Guedes Store | Moda Masculina</title>
-
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
 html{
     scroll-behavior:smooth;
 }
-
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#05070b;
     color:#ffffff;
 }
-
 /* HEADER */
-
 header{
     position:absolute;
     top:0;
@@ -37,18 +30,15 @@ header{
     justify-content:space-between;
     padding:22px 6%;
 }
-
 .logo img{
     width:120px;
     height:auto;
     display:block;
 }
-
 nav{
     display:flex;
     gap:28px;
 }
-
 nav a{
     color:#ffffff;
     text-decoration:none;
@@ -56,20 +46,16 @@ nav a{
     letter-spacing:1px;
     transition:.3s;
 }
-
 nav a:hover{
     color:#183f70;
 }
-
 /* HERO */
-
 .hero{
     min-height:100vh;
     display:flex;
     align-items:center;
     position:relative;
     overflow:hidden;
-
     background:
     linear-gradient(
         90deg,
@@ -79,14 +65,12 @@ nav a:hover{
     ),
     url("banner.jpg") center/cover no-repeat;
 }
-
 .hero-content{
     width:90%;
     max-width:1200px;
     margin:auto;
     padding-top:60px;
 }
-
 .tag{
     color:#24568f;
     font-size:13px;
@@ -94,7 +78,6 @@ nav a:hover{
     letter-spacing:3px;
     margin-bottom:18px;
 }
-
 .hero h1{
     font-size:clamp(48px,8vw,100px);
     line-height:.9;
@@ -102,11 +85,9 @@ nav a:hover{
     text-transform:uppercase;
     max-width:700px;
 }
-
 .hero h1 span{
     color:#24568f;
 }
-
 .hero p{
     max-width:480px;
     margin-top:25px;
@@ -114,7 +95,6 @@ nav a:hover{
     font-size:16px;
     line-height:1.7;
 }
-
 .btn{
     display:inline-block;
     margin-top:30px;
@@ -127,59 +107,48 @@ nav a:hover{
     letter-spacing:1px;
     transition:.3s;
 }
-
 .btn:hover{
     background:#24568f;
 }
-
 /* MARCAS */
-
 .brands{
     padding:80px 6%;
     background:#080b11;
     text-align:center;
 }
-
 .section-title{
     font-size:13px;
     letter-spacing:4px;
     color:#24568f;
     margin-bottom:35px;
 }
-
 .brand-list{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:35px;
 }
-
 .brand-list span{
     font-size:22px;
     font-weight:bold;
     letter-spacing:2px;
     color:#ffffff;
 }
-
 /* CATEGORIAS */
-
 .categories{
     padding:90px 6%;
     background:#05070b;
 }
-
 .categories h2{
     font-size:38px;
     margin-bottom:45px;
     text-transform:uppercase;
 }
-
 .category-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:15px;
 }
-
 .category{
     min-height:230px;
     display:flex;
@@ -190,7 +159,6 @@ nav a:hover{
     background:#0a0e15;
     border:1px solid #10233c;
 }
-
 .category::before{
     content:"";
     position:absolute;
@@ -200,246 +168,176 @@ nav a:hover{
         rgba(5,7,11,.9)
     );
 }
-
 .category h3{
     position:relative;
     z-index:2;
     font-size:20px;
     letter-spacing:1px;
 }
-
 /* SOBRE */
-
 .about{
     padding:100px 6%;
     background:#080b11;
 }
-
 .about-content{
     max-width:800px;
 }
-
 .about h2{
     font-size:42px;
     margin-bottom:20px;
 }
-
 .about h2 span{
     color:#24568f;
 }
-
 .about p{
     font-size:16px;
     line-height:1.8;
     color:#ffffff;
 }
-
 /* WHATSAPP */
-
 .contact{
     padding:90px 6%;
     text-align:center;
     background:#05070b;
 }
-
 .contact h2{
     font-size:40px;
     margin-bottom:15px;
 }
-
 .contact p{
     margin-bottom:20px;
 }
-
 /* FOOTER */
-
 footer{
     padding:30px 6%;
     text-align:center;
     background:#030407;
     border-top:1px solid #10233c;
 }
-
 footer p{
     font-size:12px;
     letter-spacing:1px;
 }
-
 /* CELULAR */
-
 @media(max-width:800px){
-
     header{
         padding:18px 5%;
     }
-
     .logo img{
         width:95px;
     }
-
     nav{
         gap:15px;
     }
-
     nav a{
         font-size:11px;
     }
-
     .hero{
         min-height:90vh;
     }
-
     .hero-content{
         padding-top:80px;
     }
-
     .hero h1{
         font-size:55px;
     }
-
     .hero p{
         font-size:14px;
         max-width:350px;
     }
-
     .category-grid{
         grid-template-columns:repeat(2,1fr);
     }
-
     .category{
         min-height:180px;
     }
-
     .categories h2,
     .about h2,
     .contact h2{
         font-size:32px;
     }
-
 }
-
 </style>
 </head>
-
 <body>
-
 <header>
-
     <a href="#" class="logo">
         <img src="IMG_1073.jpeg" alt="Guedes Store">
     </a>
-
     <nav>
         <a href="#inicio">Início</a>
         <a href="#categorias">Produtos</a>
         <a href="#marcas">Marcas</a>
         <a href="#contato">Contato</a>
     </nav>
-
 </header>
-
-
 <section class="hero" id="inicio">
-
     <div class="hero-content">
-
         <div class="tag">
             GUEDES STORE • MODA MASCULINA
         </div>
-
         <h1>
             SEU<br>
             <span>ESTILO.</span>
         </h1>
-
         <p>
             Moda masculina selecionada para quem
             busca presença, personalidade e estilo.
         </p>
-
         <a href="#categorias" class="btn">
             VER PRODUTOS
         </a>
-
     </div>
-
 </section>
-
-
 <section class="brands" id="marcas">
-
     <div class="section-title">
         MARCAS
     </div>
-
     <div class="brand-list">
         <span>NIKE</span>
         <span>ADIDAS</span>
         <span>PUMA</span>
         <span>OUTRAS</span>
     </div>
-
 </section>
-
-
 <section class="categories" id="categorias">
-
     <h2>
         Produtos
     </h2>
-
     <div class="category-grid">
-
         <div class="category">
             <h3>CAMISETAS</h3>
         </div>
-
         <div class="category">
             <h3>CALÇAS</h3>
         </div>
-
         <div class="category">
             <h3>SHORTS</h3>
         </div>
-
         <div class="category">
             <h3>ACESSÓRIOS</h3>
         </div>
-
     </div>
-
 </section>
-
-
 <section class="about">
-
     <div class="about-content">
-
         <h2>
             GUEDES <span>STORE</span>
         </h2>
-
         <p>
             Uma loja de moda masculina multimarcas,
             com peças selecionadas para diferentes
             estilos e momentos.
         </p>
-
     </div>
-
 </section>
-
-
 <section class="contact" id="contato">
-
     <h2>
         Gostou de alguma peça?
     </h2>
-
     <p>
         Fale com a Guedes Store pelo WhatsApp.
     </p>
-
     <a
         href="https://wa.me/16994049604
         class="btn"
@@ -447,17 +345,11 @@ footer p{
     >
         FALAR NO WHATSAPP
     </a>
-
 </section>
-
-
 <footer>
-
     <p>
         GUEDES STORE • MODA MASCULINA
     </p>
-
 </footer>
-
 </body>
 </html>
