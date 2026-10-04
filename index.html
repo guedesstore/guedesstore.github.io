@@ -3,28 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Guedes Store | Moda Masculina</title>
+
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+
 html{
     scroll-behavior:smooth;
 }
+
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#fff;
     color:#111;
 }
+
 a{
     text-decoration:none;
     color:inherit;
 }
+
 /* =========================
 HEADER
 ========================= */
+
 header{
     position:fixed;
     top:0;
@@ -35,37 +43,44 @@ header{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    background:rgba(255,255,255,.94);
+    background:rgba(255,255,255,.95);
     backdrop-filter:blur(15px);
     border-bottom:1px solid #e9e9e9;
     z-index:1000;
 }
+
 .logo{
     font-size:19px;
     font-weight:900;
     letter-spacing:4px;
 }
+
 nav{
     display:flex;
     gap:30px;
 }
+
 nav a{
     font-size:12px;
     font-weight:700;
     transition:.2s;
 }
+
 nav a:hover{
     opacity:.45;
 }
+
 .header-cart{
     border:1px solid #111;
     padding:10px 17px;
     font-size:11px;
     font-weight:800;
 }
+
 /* =========================
-BANNER
+HERO
 ========================= */
+
 .hero{
     min-height:100vh;
     padding-top:74px;
@@ -73,14 +88,16 @@ BANNER
     color:#fff;
     overflow:hidden;
 }
+
 .hero-container{
     width:100%;
     max-width:1500px;
     min-height:calc(100vh - 74px);
     margin:auto;
     display:grid;
-    grid-template-columns:52% 48%;
+    grid-template-columns:45% 55%;
 }
+
 .hero-content{
     position:relative;
     display:flex;
@@ -89,6 +106,7 @@ BANNER
     padding:70px 7%;
     z-index:2;
 }
+
 .hero-content::before{
     content:"GS";
     position:absolute;
@@ -101,29 +119,34 @@ BANNER
     color:rgba(255,255,255,.025);
     pointer-events:none;
 }
+
 .welcome{
     font-size:10px;
     letter-spacing:5px;
     color:#888;
-    margin-bottom:28px;
+    margin-bottom:25px;
 }
+
 .hero h1{
-    font-size:clamp(65px,9vw,135px);
-    line-height:.78;
-    letter-spacing:-8px;
+    font-size:clamp(58px,8vw,115px);
+    line-height:.8;
+    letter-spacing:-7px;
     font-weight:900;
-    margin-bottom:38px;
+    margin-bottom:32px;
 }
+
 .hero h1 span{
     color:#777;
 }
+
 .hero-text{
     max-width:430px;
-    color:#888;
+    color:#999;
     font-size:14px;
     line-height:1.8;
-    margin-bottom:35px;
+    margin-bottom:32px;
 }
+
 .hero-button{
     width:max-content;
     background:#fff;
@@ -134,24 +157,81 @@ BANNER
     letter-spacing:2px;
     transition:.25s;
 }
+
 .hero-button:hover{
     transform:translateY(-4px);
     background:#ddd;
 }
-/* LADO DIREITO */
+
+/* =========================
+FOTOS DO HERO
+========================= */
+
 .hero-visual{
     position:relative;
-    width:100%;
-    height:100%;
-    min-height:500px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    min-height:calc(100vh - 74px);
+    background:#111;
     overflow:hidden;
 }
+
+.hero-photo{
+    position:absolute;
+    overflow:hidden;
+    background:#222;
+}
+
+.hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.hero-photo:hover img{
+    transform:scale(1.04);
+}
+
+/* foto principal */
+
+.hero-photo.main{
+    width:53%;
+    height:72%;
+    top:10%;
+    left:10%;
+}
+
+/* foto lateral */
+
+.hero-photo.side{
+    width:35%;
+    height:45%;
+    right:5%;
+    top:5%;
+}
+
+/* foto inferior */
+
+.hero-photo.bottom{
+    width:38%;
+    height:42%;
+    right:4%;
+    bottom:5%;
+}
+
+/* quarta foto */
+
+.hero-photo.small{
+    width:30%;
+    height:30%;
+    left:2%;
+    bottom:4%;
+}
+
 /* =========================
 FAIXA
 ========================= */
+
 .brand-strip{
     border-bottom:1px solid #eee;
     border-top:1px solid #eee;
@@ -164,12 +244,68 @@ FAIXA
     font-weight:700;
     letter-spacing:3px;
 }
+
+/* =========================
+BEM-VINDO
+========================= */
+
+.welcome-section{
+    padding:100px 5%;
+    background:#fff;
+}
+
+.welcome-container{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.welcome-label{
+    font-size:10px;
+    color:#999;
+    letter-spacing:4px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.welcome-section h2{
+    font-size:clamp(42px,6vw,75px);
+    line-height:.9;
+    letter-spacing:-5px;
+    margin-bottom:25px;
+}
+
+.welcome-section p{
+    max-width:500px;
+    color:#777;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.welcome-photo{
+    height:430px;
+    overflow:hidden;
+    background:#eee;
+}
+
+.welcome-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
 /* =========================
 CATEGORIAS
 ========================= */
+
 .categories{
     padding:110px 5%;
 }
+
 .section-header{
     max-width:1300px;
     margin:0 auto 45px;
@@ -177,23 +313,27 @@ CATEGORIAS
     justify-content:space-between;
     align-items:end;
 }
+
 .section-label{
     font-size:10px;
     color:#999;
     letter-spacing:4px;
     font-weight:700;
 }
+
 .section-title{
     font-size:clamp(42px,6vw,75px);
     letter-spacing:-4px;
     margin-top:8px;
 }
+
 .section-link{
     font-size:11px;
     font-weight:800;
     border-bottom:1px solid #111;
     padding-bottom:5px;
 }
+
 .category-grid{
     max-width:1300px;
     margin:auto;
@@ -201,6 +341,7 @@ CATEGORIAS
     grid-template-columns:2fr 1fr 1fr;
     gap:14px;
 }
+
 .category{
     height:400px;
     position:relative;
@@ -212,42 +353,49 @@ CATEGORIAS
     color:#fff;
     transition:.35s;
 }
+
 .category:nth-child(2),
 .category:nth-child(3){
     height:400px;
 }
+
 .category:hover{
     transform:translateY(-7px);
 }
+
 .category::before{
     content:"";
     position:absolute;
     inset:0;
-    background:
-        radial-gradient(
-            circle at 50% 35%,
-            #555,
-            #111 65%
-        );
+    background:radial-gradient(
+        circle at 50% 35%,
+        #555,
+        #111 65%
+    );
     opacity:.8;
 }
+
 .category-content{
     position:relative;
     z-index:2;
 }
+
 .category-number{
     font-size:10px;
     color:#aaa;
     letter-spacing:2px;
     margin-bottom:8px;
 }
+
 .category h3{
     font-size:27px;
     font-weight:800;
 }
+
 /* =========================
 DESTAQUE
 ========================= */
+
 .feature{
     margin:0 5% 110px;
     min-height:500px;
@@ -257,24 +405,28 @@ DESTAQUE
     grid-template-columns:1fr 1fr;
     overflow:hidden;
 }
+
 .feature-content{
     padding:70px;
     display:flex;
     flex-direction:column;
     justify-content:center;
 }
+
 .feature-label{
     color:#888;
     font-size:10px;
     letter-spacing:4px;
     margin-bottom:20px;
 }
+
 .feature h2{
     font-size:clamp(45px,6vw,80px);
     letter-spacing:-5px;
     line-height:.9;
     margin-bottom:25px;
 }
+
 .feature p{
     color:#999;
     max-width:400px;
@@ -282,6 +434,7 @@ DESTAQUE
     font-size:14px;
     margin-bottom:30px;
 }
+
 .feature-button{
     width:max-content;
     border:1px solid #555;
@@ -289,63 +442,16 @@ DESTAQUE
     font-size:11px;
     font-weight:800;
 }
-/* =========================
-ROUPAS ESPALHADAS
-========================= */
-.feature-visual{
-    background:
-        linear-gradient(135deg,#202020,#444);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-.clothing-showcase{
-    width:100%;
-    height:100%;
-    min-height:500px;
-    position:relative;
-}
-.clothing-item{
-    position:absolute;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:1px solid rgba(255,255,255,.2);
-    color:#ddd;
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:2px;
-    background:linear-gradient(145deg,#444,#111);
-    box-shadow:0 25px 50px rgba(0,0,0,.5);
-}
-.clothing-item:nth-child(1){
-    width:180px;
-    height:250px;
-    top:12%;
-    left:12%;
-    transform:rotate(-8deg);
-}
-.clothing-item:nth-child(2){
-    width:200px;
-    height:280px;
-    top:30%;
-    right:10%;
-    transform:rotate(7deg);
-}
-.clothing-item:nth-child(3){
-    width:130px;
-    height:130px;
-    bottom:10%;
-    left:40%;
-    transform:rotate(-4deg);
-}
+
 /* =========================
 PRODUTOS
 ========================= */
+
 .products{
     padding:110px 5%;
     background:#f5f5f5;
 }
+
 .product-grid{
     max-width:1300px;
     margin:auto;
@@ -353,42 +459,46 @@ PRODUTOS
     grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
+
 .product{
     background:#fff;
     transition:.3s;
 }
+
 .product:hover{
     transform:translateY(-6px);
 }
+
 .product-image{
     height:370px;
-    background:
-        linear-gradient(
-            145deg,
-            #ddd,
-            #f5f5f5
-        );
+    background:#eee;
     display:flex;
     align-items:center;
     justify-content:center;
     color:#aaa;
     font-size:9px;
     letter-spacing:3px;
+    overflow:hidden;
 }
+
 .product-info{
     padding:20px;
 }
+
 .product-info h3{
     font-size:15px;
     margin-bottom:8px;
 }
+
 .product-info p{
     font-size:12px;
     color:#888;
 }
+
 /* =========================
 CATEGORIAS DOS PRODUTOS
 ========================= */
+
 .product-categories{
     max-width:1300px;
     margin:0 auto 35px;
@@ -396,6 +506,7 @@ CATEGORIAS DOS PRODUTOS
     flex-wrap:wrap;
     gap:10px;
 }
+
 .product-category{
     border:1px solid #111;
     background:#fff;
@@ -406,18 +517,22 @@ CATEGORIAS DOS PRODUTOS
     cursor:pointer;
     transition:.2s;
 }
+
 .product-category:hover{
     background:#111;
     color:#fff;
 }
+
 /* =========================
 PESQUISA
 ========================= */
+
 .search-box{
     max-width:1300px;
     margin:0 auto 35px;
     position:relative;
 }
+
 .search-box input{
     width:100%;
     padding:18px 22px;
@@ -427,39 +542,44 @@ PESQUISA
     font-size:13px;
     outline:none;
 }
-.search-box input:focus{
-    border-color:#111;
-}
+
 .search-box input::placeholder{
     color:#999;
 }
+
 /* =========================
 MARCAS
 ========================= */
+
 .about{
     padding:120px 5%;
     background:#fff;
     text-align:center;
 }
+
 .about-label{
     font-size:10px;
     letter-spacing:4px;
     color:#999;
     font-weight:700;
 }
+
 .brands-list{
     margin-top:35px;
     text-align:center;
 }
+
 .brands-list div{
     font-size:18px;
     font-weight:800;
     letter-spacing:3px;
     margin:18px 0;
 }
+
 /* =========================
 FOOTER
 ========================= */
+
 footer{
     background:#080808;
     color:#777;
@@ -470,9 +590,11 @@ footer{
     font-size:10px;
     letter-spacing:1px;
 }
+
 /* =========================
 WHATSAPP
 ========================= */
+
 .whatsapp{
     position:fixed;
     right:20px;
@@ -486,474 +608,823 @@ WHATSAPP
     z-index:2000;
     box-shadow:0 10px 35px rgba(0,0,0,.25);
 }
+
 /* =========================
 CELULAR
 ========================= */
+
 @media(max-width:850px){
+
     header{
         padding:0 20px;
     }
+
     nav{
         gap:14px;
     }
+
     nav a{
         font-size:10px;
     }
+
     .header-cart{
         display:none;
     }
+
     .hero-container{
         grid-template-columns:1fr;
     }
+
     .hero-content{
-        padding:80px 25px 70px;
-        min-height:580px;
+        padding:75px 25px 60px;
+        min-height:500px;
     }
+
     .hero h1{
         font-size:70px;
         letter-spacing:-6px;
     }
+
     .hero-visual{
-        height:470px;
+        height:500px;
+        min-height:500px;
     }
+
+    .hero-photo.main{
+        width:55%;
+        height:70%;
+        left:7%;
+    }
+
+    .hero-photo.side{
+        width:35%;
+        height:45%;
+        right:4%;
+    }
+
+    .hero-photo.bottom{
+        width:38%;
+        height:40%;
+        right:4%;
+        bottom:4%;
+    }
+
+    .hero-photo.small{
+        width:30%;
+        height:30%;
+        left:2%;
+        bottom:3%;
+    }
+
     .brand-strip{
         overflow:hidden;
         white-space:nowrap;
     }
+
+    .welcome-container{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .welcome-photo{
+        height:380px;
+    }
+
     .category-grid{
         grid-template-columns:1fr 1fr;
     }
+
     .category{
         height:230px;
     }
+
     .category:nth-child(2),
     .category:nth-child(3){
         height:230px;
     }
+
     .feature{
         grid-template-columns:1fr;
     }
+
     .feature-content{
         padding:55px 30px;
     }
-    .feature-visual{
-        height:350px;
-    }
+
     .product-grid{
         grid-template-columns:1fr 1fr;
     }
+
     footer{
         flex-direction:column;
         gap:15px;
     }
 }
+
 @media(max-width:500px){
+
     .logo{
         font-size:15px;
         letter-spacing:3px;
     }
+
     nav a:nth-child(3){
         display:none;
     }
+
     .hero h1{
         font-size:60px;
     }
+
     .hero-visual{
-        height:390px;
+        height:420px;
+        min-height:420px;
     }
+
+    .hero-photo.main{
+        width:58%;
+        height:68%;
+    }
+
+    .hero-photo.side{
+        width:36%;
+        height:43%;
+    }
+
+    .hero-photo.bottom{
+        width:40%;
+        height:38%;
+    }
+
+    .hero-photo.small{
+        width:30%;
+        height:28%;
+    }
+
     .category-grid{
         grid-template-columns:1fr;
     }
+
     .category,
     .category:nth-child(2),
     .category:nth-child(3){
         height:220px;
     }
+
     .section-header{
         display:block;
     }
+
     .section-link{
         display:inline-block;
         margin-top:20px;
     }
+
     .product-grid{
         grid-template-columns:1fr 1fr;
         gap:10px;
     }
+
     .product-image{
         height:230px;
     }
+
     .about{
         padding:90px 5%;
     }
+
     .product-categories{
         gap:7px;
     }
+
     .product-category{
         padding:10px 12px;
         font-size:9px;
     }
+
+    .welcome-section{
+        padding:80px 5%;
+    }
+
+    .welcome-section h2{
+        font-size:50px;
+    }
+
 }
+
 </style>
 </head>
+
 <body>
+
 <header>
+
 <a href="#inicio" class="logo">
     GUEDES STORE
 </a>
+
 <nav>
     <a href="#inicio">Início</a>
     <a href="#produtos">Produtos</a>
     <a href="#marcas">Marcas</a>
 </nav>
+
 <a href="#produtos" class="header-cart">
     COMPRAR
 </a>
+
 </header>
+
+
 <!-- =========================
-BANNER
+BANNER PRINCIPAL
 ========================= -->
+
 <section class="hero" id="inicio">
+
 <div class="hero-container">
+
     <div class="hero-content">
+
         <div class="welcome">
             GUEDES STORE • MODA MASCULINA
         </div>
+
         <h1>
             SEU<br>
             <span>ESTILO.</span>
         </h1>
+
         <p class="hero-text">
             Peças selecionadas para quem valoriza
             presença, personalidade e identidade.
         </p>
+
         <a href="#produtos" class="hero-button">
             VER PRODUTOS
         </a>
+
     </div>
+
+
+    <!-- FOTOS -->
+
     <div class="hero-visual">
+
+        <div class="hero-photo main">
+            <img src="IMG_1117.jpeg" alt="Guedes Store">
+        </div>
+
+        <div class="hero-photo side">
+            <img src="IMG_1119.jpeg" alt="Guedes Store">
+        </div>
+
+        <div class="hero-photo bottom">
+            <img src="IMG_1123.jpeg" alt="Guedes Store">
+        </div>
+
+        <div class="hero-photo small">
+            <img src="IMG_1125.jpeg" alt="Guedes Store">
+        </div>
+
     </div>
+
 </div>
+
 </section>
+
+
 <!-- =========================
 FAIXA
 ========================= -->
+
 <div class="brand-strip">
+
 <span>GUEDES STORE</span>
 <span>MODA MASCULINA</span>
 <span>ESTILO</span>
 <span>IDENTIDADE</span>
 <span>2026</span>
+
 </div>
+
+
+<!-- =========================
+BEM-VINDO
+========================= -->
+
+<section class="welcome-section">
+
+<div class="welcome-container">
+
+    <div>
+
+        <div class="welcome-label">
+            SEJA BEM-VINDO
+        </div>
+
+        <h2>
+            GUEDES<br>
+            STORE.
+        </h2>
+
+        <p>
+            Uma loja criada para quem gosta de se vestir
+            bem e expressar sua personalidade através
+            do próprio estilo.
+        </p>
+
+    </div>
+
+    <div class="welcome-photo">
+
+        <img src="IMG_1119.jpeg" alt="Peça Guedes Store">
+
+    </div>
+
+</div>
+
+</section>
+
+
 <!-- =========================
 DESTAQUE
 ========================= -->
+
 <section class="feature">
+
 <div class="feature-content">
+
     <div class="feature-label">
         GUEDES STORE
     </div>
+
     <h2>
         VISTA<br>
         SUA<br>
         IDENTIDADE.
     </h2>
+
     <p>
         Peças selecionadas para construir
         combinações que tenham a sua cara.
     </p>
+
     <a href="#produtos" class="feature-button">
         CONHECER PRODUTOS
     </a>
+
 </div>
+
 <div class="feature-visual">
-    <div class="clothing-showcase">
-        <div class="clothing-item">
-            CAMISA
-        </div>
-        <div class="clothing-item">
-            JAQUETA
-        </div>
-        <div class="clothing-item">
-            BONÉ
-        </div>
+
+    <div class="hero-photo main" style="position:absolute;">
+        <img src="IMG_1123.jpeg" alt="Guedes Store">
     </div>
+
 </div>
+
 </section>
+
+
 <!-- =========================
 PRODUTOS
 ========================= -->
+
 <section class="products" id="produtos">
+
 <div class="section-header">
+
     <div>
+
         <div class="section-label">
             GUEDES STORE
         </div>
+
         <h2 class="section-title">
             Produtos
         </h2>
+
     </div>
+
     <a href="#produtos" class="section-link">
         COLEÇÃO
     </a>
+
 </div>
-<!-- CATEGORIAS -->
+
+
 <div class="product-categories">
-    <button class="product-category" onclick="filterCategory('todos')">
+
+    <button class="product-category"
+    onclick="filterCategory('todos')">
         TODOS
     </button>
-    <button class="product-category" onclick="filterCategory('roupas')">
+
+    <button class="product-category"
+    onclick="filterCategory('roupas')">
         ROUPAS
     </button>
-    <button class="product-category" onclick="filterCategory('calcados')">
+
+    <button class="product-category"
+    onclick="filterCategory('calcados')">
         CALÇADOS
     </button>
-    <button class="product-category" onclick="filterCategory('chinelos')">
+
+    <button class="product-category"
+    onclick="filterCategory('chinelos')">
         CHINELOS
     </button>
-    <button class="product-category" onclick="filterCategory('acessorios')">
+
+    <button class="product-category"
+    onclick="filterCategory('acessorios')">
         ACESSÓRIOS
     </button>
+
 </div>
+
+
 <div class="search-box">
+
     <input
         type="text"
         id="productSearch"
         placeholder="🔎 Pesquisar produtos..."
     >
+
 </div>
+
+
 <div class="product-grid">
-    <!-- ROUPAS -->
+
     <div class="product" data-category="roupas">
+
         <div class="product-image">
             ROUPA
         </div>
+
         <div class="product-info">
+
             <h3>
                 Camiseta Premium
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
+
+
     <div class="product" data-category="roupas">
+
         <div class="product-image">
             ROUPA
         </div>
+
         <div class="product-info">
+
             <h3>
                 Jaqueta / Blusa
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
+
+
     <div class="product" data-category="roupas">
+
         <div class="product-image">
             ROUPA
         </div>
+
         <div class="product-info">
+
             <h3>
                 Calça / Short
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
-    <!-- CALÇADOS -->
+
+
     <div class="product" data-category="calcados">
+
         <div class="product-image">
             CALÇADO
         </div>
+
         <div class="product-info">
+
             <h3>
                 Tênis
             </h3>
+
             <p>
                 Em breve
             </p>
+
         </div>
+
     </div>
+
+
     <div class="product" data-category="calcados">
+
         <div class="product-image">
             CALÇADO
         </div>
+
         <div class="product-info">
+
             <h3>
                 Sapatênis
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
-    <!-- CHINELOS -->
+
+
     <div class="product" data-category="chinelos">
+
         <div class="product-image">
             CHINELO
         </div>
+
         <div class="product-info">
+
             <h3>
                 Chinelo
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
+
+
     <div class="product" data-category="chinelos">
+
         <div class="product-image">
             SLIDE
         </div>
+
         <div class="product-info">
+
             <h3>
                 Slide
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
-    <!-- ACESSÓRIOS -->
+
+
     <div class="product" data-category="acessorios">
+
         <div class="product-image">
             MOCHILA
         </div>
+
         <div class="product-info">
+
             <h3>
                 Mochilas
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
+
+
     <div class="product" data-category="acessorios">
+
         <div class="product-image">
             ÓCULOS
         </div>
+
         <div class="product-info">
+
             <h3>
                 Óculos
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
+
+
     <div class="product" data-category="acessorios">
+
         <div class="product-image">
             CINTO
         </div>
+
         <div class="product-info">
+
             <h3>
                 Cintos
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
+
+
     <div class="product" data-category="acessorios">
+
         <div class="product-image">
             SHOULDER BAG
         </div>
+
         <div class="product-info">
+
             <h3>
                 Shoulder Bags
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
+
+
     <div class="product" data-category="acessorios">
+
         <div class="product-image">
             MEIAS
         </div>
+
         <div class="product-info">
+
             <h3>
                 Meias Premium
             </h3>
+
             <p>
                 Confira disponibilidade
             </p>
+
         </div>
+
     </div>
+
 </div>
+
 </section>
+
+
 <!-- =========================
 MARCAS
 ========================= -->
+
 <section class="about" id="marcas">
+
 <div class="about-label">
     MARCAS
 </div>
+
 <div class="brands-list">
+
     <div>NIKE</div>
     <div>ADIDAS</div>
     <div>LACOSTE</div>
     <div>BROOKSFIELD</div>
     <div>TOMMY HILFIGER</div>
     <div>PUMA</div>
+
 </div>
+
 </section>
+
+
 <!-- =========================
 FOOTER
 ========================= -->
+
 <footer>
+
 <span>
     © 2026 GUEDES STORE
 </span>
+
 <span>
     TODOS OS DIREITOS RESERVADOS
 </span>
+
 </footer>
+
+
 <!-- =========================
 WHATSAPP
 ========================= -->
 
 <a
-href=“https://wa.me/5516994049604?text=Opa!%20Vim%20pela%20Guedes%20Store%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos.”
-target=”_blank”
-class=“whatsapp”
+href="https://wa.me/5516994049604?text=Opa!%20Vim%20pela%20Guedes%20Store%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos."
+target="_blank"
+class="whatsapp">
 
 WHATSAPP
+
 </a>
+
+
 <!-- =========================
 PESQUISA E FILTROS
 ========================= -->
+
 <script>
+
 let currentCategory = "todos";
+
 function searchProducts(){
+
     const search = document
         .getElementById("productSearch")
         .value
         .toLowerCase();
-    const products = document.querySelectorAll(".product");
+
+    const products =
+        document.querySelectorAll(".product");
+
     products.forEach(function(product){
-        const name = product.innerText.toLowerCase();
-        const matchesSearch = name.includes(search);
+
+        const name =
+            product.innerText.toLowerCase();
+
+        const matchesSearch =
+            name.includes(search);
+
         const matchesCategory =
             currentCategory === "todos" ||
             product.dataset.category === currentCategory;
+
         if(matchesSearch && matchesCategory){
+
             product.style.display = "";
+
         }else{
+
             product.style.display = "none";
+
         }
+
     });
+
 }
+
 function filterCategory(category){
+
     currentCategory = category;
+
     searchProducts();
+
 }
+
 document
     .getElementById("productSearch")
     .addEventListener("input", searchProducts);
+
 </script>
+
 </body>
 </html>
