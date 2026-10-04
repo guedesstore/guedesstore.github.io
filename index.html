@@ -160,22 +160,28 @@ HERO
 
 .hero-button:hover{
     transform:translateY(-4px);
-    background:#ddd;
+    background:#111;
+    color:#fff;
 }
-
-/* =========================
-FOTOS DO HERO
-========================= */
 
 .hero-visual{
     position:relative;
+    width:100%;
+    height:100%;
     min-height:calc(100vh - 74px);
     background:#111;
     overflow:hidden;
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    grid-template-rows:1fr 1fr;
+    gap:8px;
+    padding:8px;
 }
 
 .hero-photo{
-    position:absolute;
+    position:relative;
+    width:100%;
+    height:100%;
     overflow:hidden;
     background:#222;
 }
@@ -185,47 +191,38 @@ FOTOS DO HERO
     height:100%;
     object-fit:cover;
     display:block;
-    transition:.5s;
+    transition:.4s;
 }
 
 .hero-photo:hover img{
-    transform:scale(1.04);
+    transform:scale(1.03);
 }
 
-/* foto principal */
+/* FOTO PRINCIPAL */
 
 .hero-photo.main{
-    width:53%;
-    height:72%;
-    top:10%;
-    left:10%;
+    grid-row:1 / 3;
+    grid-column:1;
 }
 
-/* foto lateral */
+/* FOTO SUPERIOR */
 
 .hero-photo.side{
-    width:35%;
-    height:45%;
-    right:5%;
-    top:5%;
+    grid-row:1;
+    grid-column:2;
 }
 
-/* foto inferior */
+/* FOTO INFERIOR */
 
 .hero-photo.bottom{
-    width:38%;
-    height:42%;
-    right:4%;
-    bottom:5%;
+    grid-row:2;
+    grid-column:2;
 }
 
-/* quarta foto */
+/* QUARTA FOTO */
 
 .hero-photo.small{
-    width:30%;
-    height:30%;
-    left:2%;
-    bottom:4%;
+    display:none;
 }
 
 /* =========================
